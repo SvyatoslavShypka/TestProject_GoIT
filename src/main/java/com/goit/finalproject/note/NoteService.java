@@ -34,8 +34,7 @@ public class NoteService {
         if (noteDto.getUser_id() == null) {
             if (userId != null) {
                 noteDto.setUser_id(userId);
-            }
-            else {
+            } else {
                 noteDto.setUser_id(userService.getUserId());
             }
         }
@@ -64,7 +63,7 @@ public class NoteService {
     public void updateNoteById(Long id, HttpServletRequest request) {
         NoteDto noteDto = getById(id);
         String title = request.getParameter("title");
-        if (title==null || title.isEmpty()) {
+        if (title == null || title.isEmpty()) {
             title = noteDto.getTitle();
         }
         String content = request.getParameter("content");
