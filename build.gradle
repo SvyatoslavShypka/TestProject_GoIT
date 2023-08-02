@@ -34,10 +34,21 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
 
+    implementation 'org.springframework.cloud:spring-cloud-gcp-starter-logging:1.2.8.RELEASE'
+    implementation 'com.google.cloud:google-cloud-core:2.20.0'
+
     implementation "org.mapstruct:mapstruct:${mapstructVersion}"
     annotationProcessor 'org.projectlombok:lombok'
     annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
 }
+
+/*
+jib {
+    to {
+        image = "gcr.io/\$PROJECT_ID/microservice-template:manual"
+    }
+}
+*/
 
 tasks.named('test') {
     useJUnitPlatform()
