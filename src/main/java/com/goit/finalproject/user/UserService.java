@@ -32,7 +32,7 @@ public class UserService implements UserDetailsService {
 
     public void createUser(User user) {
         Role userRole = roleService.getRoleByName("USER");
-        user.setRoles(new HashSet<Role>(Collections.singletonList(userRole)));
+        user.setRoles(new HashSet<>(Collections.singletonList(userRole)));
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);
     }
