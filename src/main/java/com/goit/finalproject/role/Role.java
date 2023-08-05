@@ -28,6 +28,7 @@ import java.util.List;
 @ToString(exclude = {"userList"})
 public class Role implements GrantedAuthority {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
