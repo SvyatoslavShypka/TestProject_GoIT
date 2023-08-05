@@ -3,7 +3,6 @@ plugins {
     id 'checkstyle'
     id 'jacoco'
     id 'com.google.cloud.tools.appengine' version '2.4.4'
-    id 'com.google.cloud.tools.jib' version '3.0.0'
     id 'org.springframework.boot' version '3.1.1'
     id 'io.spring.dependency-management' version '1.1.2'
 }
@@ -49,7 +48,7 @@ dependencies {
     annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
 }
 
-jib.to.image = "gcr.io/gcr.io/cloudrun/placeholder@sha256:074b4a18d91897a871e2e25184d63393de20415a053fad59c8ebb54d910b5d62/microservice-template:manual"
+//jib.to.image = "gcr.io/gcr.io/cloudrun/placeholder@sha256:074b4a18d91897a871e2e25184d63393de20415a053fad59c8ebb54d910b5d62/microservice-template:manual"
 
 tasks.named('test') {
     useJUnitPlatform()
