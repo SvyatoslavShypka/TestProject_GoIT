@@ -1,4 +1,3 @@
-rootProject.name = 'TestProject'
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -13,3 +12,4 @@ pluginManagement {
         }
     }
 }
+rootProject.name = 'TestProject'

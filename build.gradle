@@ -45,12 +45,14 @@ dependencies {
     annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
 }
 
+/*
 jib {
     to {
 //        image = "gcr.io/$PROJECT_ID/microservice-template:manual"
         image = "gcr.io/gcr.io/cloudrun/placeholder@sha256:074b4a18d91897a871e2e25184d63393de20415a053fad59c8ebb54d910b5d62/microservice-template:manual"
     }
 }
+*/
 
 tasks.named('test') {
     useJUnitPlatform()
