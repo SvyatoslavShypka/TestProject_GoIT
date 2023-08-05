@@ -3,6 +3,7 @@ plugins {
     id 'checkstyle'
     id 'jacoco'
     id 'com.google.cloud.tools.appengine' version '2.4.4'
+    id 'com.google.cloud.tools.jib' version '3.0.0'
     id 'org.springframework.boot' version '3.1.1'
     id 'io.spring.dependency-management' version '1.1.2'
 }
@@ -35,6 +36,9 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
 
+//    implementation 'gradle.plugin.com.google.cloud.tools:jib-gradle-plugin:3.0.0'
+//    implementation 'com.google.cloud.tools.jib:com.google.cloud.tools.jib.gradle.plugin:3.0.0'
+
     implementation 'com.google.cloud.tools:appengine-maven-plugin:2.4.4'
 
     implementation 'org.springframework.cloud:spring-cloud-gcp-starter-logging:1.2.8.RELEASE'
@@ -45,14 +49,7 @@ dependencies {
     annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
 }
 
-/*
-jib {
-    to {
-//        image = "gcr.io/$PROJECT_ID/microservice-template:manual"
-        image = "gcr.io/gcr.io/cloudrun/placeholder@sha256:074b4a18d91897a871e2e25184d63393de20415a053fad59c8ebb54d910b5d62/microservice-template:manual"
-    }
-}
-*/
+jib.to.image = "gcr.io/gcr.io/cloudrun/placeholder@sha256:074b4a18d91897a871e2e25184d63393de20415a053fad59c8ebb54d910b5d62/microservice-template:manual"
 
 tasks.named('test') {
     useJUnitPlatform()
