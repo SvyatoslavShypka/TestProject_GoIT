@@ -51,9 +51,13 @@ on:
     branches: [ "master" ]
 
 env:
-  PROJECT_ID: test-progect-2 # TODO: update Google Cloud project id
-  SERVICE: testproject-goit # TODO: update Cloud Run service name
-  REGION: europe-central2 # TODO: update Cloud Run service region
+#  PROJECT_ID: test-progect-2 # TODO: update Google Cloud project id
+#  SERVICE: testproject-goit # TODO: update Cloud Run service name
+#  REGION: europe-central2 # TODO: update Cloud Run service region
+
+    PROJECT_ID: YOUR_PROJECT_ID # TODO: update Google Cloud project id
+    SERVICE: YOUR_SERVICE_NAME # TODO: update Cloud Run service name
+    REGION: YOUR_SERVICE_REGION # TODO: update Cloud Run service region
 
 jobs:
   deploy:
